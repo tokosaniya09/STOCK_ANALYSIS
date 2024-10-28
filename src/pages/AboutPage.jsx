@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <>
       <h1>ABOUT PAGE</h1>
-      <p>This app gives recipes</p>
+      <p>This app gives stock information</p>
     </>
   );
 }

@@ -1,21 +1,53 @@
+// import "./App.css";
+// import { Outlet, BrowserRouter as Router, Routes, Route  } from "react-router-dom";
+// import NavBar from "./components/NavBar";
+// import StockInfo from "./components/StockInfo"; 
+// import Home from "./pages/HomePage"; 
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <div className="container">
+//         <NavBar />
+//         <main className="main_container">
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/stockinfo" element={<StockInfo />} />
+//           <Route path="*" element={<Outlet />} />
+//         </Routes>
+//         </main>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import StockInfo from "./components/StockInfo"; 
+import Home from "./pages/HomePage"; 
 
 function App() {
   return (
-    <div className="App">
-      <div class="container">
-        <NavBar />
-        <main className="main_container">
-          <Outlet />
-        </main>
+      <div className="App">
+        <div className="container">
+          <NavBar />
+          <main className="main_container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/stockinfo" element={<StockInfo />} />
+              <Route path="*" element={<div>Page Not Found</div>} />
+            </Routes>
+          </main>
+        </div>
       </div>
-    </div>
   );
 }
 
 export default App;
+
 
 
 {/* <div className="App">

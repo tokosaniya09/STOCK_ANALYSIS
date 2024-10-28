@@ -16,7 +16,7 @@ export default function RecipePage() {
 
   if (loading) return <Loading />;
   if (error) return <h1>{error}</h1>;
-  if (data?.errors) return <Error explanation="Recipe not found" />;
+  if (data?.errors) return <Error explanation="Stock not found" />;
 
   console.log(data);
   return (
