@@ -4,7 +4,7 @@ import { useReducer } from "react";
 const options = {
   method: "GET",
   url: "https://tasty.p.rapidapi.com/recipes/get-more-info",
-  params: { id: "8138" },
+  params: { id: "8139" },
   headers: {
     "X-RapidAPI-Key": "30b594a022mshc657030b09147dcp153ad1jsn8b9a863a5527",
     "X-RapidAPI-Host": "tasty.p.rapidapi.com",
