@@ -13,6 +13,7 @@ import RecipePage from "./pages/RecipePage";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Ingredients from "./components/Ingredient.jsx";
 import Instructions from "./components/Instruction.jsx";
+import StockInfo from "./components/StockInfo.jsx";
 import "./index.css";
 
 const router = createBrowserRouter(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/stockinfo" element={<StockInfo />} />
       <Route path="/recipe/:id" element={<RecipePage />}>
         <Route path="/recipe/:id/ingredients" element={<Ingredients />} />
         <Route path="/recipe/:id/instructions" element={<Instructions />} />
