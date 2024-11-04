@@ -1,5 +1,4 @@
 import React from 'react';
-import stockInfo from '../assets/stock_info.jpg'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
