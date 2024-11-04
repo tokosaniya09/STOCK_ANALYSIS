@@ -62,19 +62,19 @@ const StockInfo = () => {
     Aos.init({duration: 1000});
   }, [])
   return (
-    <div data-aos="fade-up" className="about stock">
+    <div className="about stock">
       {/* <img src={stockInfo} alt="" /> */}
       <div>
-        <h1 data-aos="fade-up">Stock Market Basics</h1>
-        <p data-aos="fade-up">
+        <h1 >Stock Market Basics</h1>
+        <p >
           Get familiar with the key stock market terms and examples to better understand investing.
         </p>
-        <div data-aos="fade-up">
+        <div >
           {stockTerms.map((item, index) => (
-            <div  data-aos="fade-up" key={index}>
-              <h2 data-aos="fade-up">{item.term}</h2>
-              <p data-aos="fade-up">{item.definition}</p>
-              <p data-aos="fade-up"> <span>Example: </span>{item.example}</p>
+            <div key={index}>
+              <h2 >{item.term}</h2>
+              <p >{item.definition}</p>
+              <p > <span>Example: </span>{item.example}</p>
             </div>
           ))}
         </div>
