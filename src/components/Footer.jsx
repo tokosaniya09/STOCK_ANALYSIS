@@ -16,6 +16,8 @@ export default function Footer() {
                         onChange={(e) => setSearchTerm(e.target.value)}
                         value={searchTerm}
                     />
+                    <br/>
+                    <br/>
                     <button onClick={mail}>Subscribe</button>
                 </div>
             </div>

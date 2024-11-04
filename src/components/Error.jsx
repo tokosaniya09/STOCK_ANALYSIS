@@ -6,7 +6,7 @@ export default function Error({ message, explanation }) {
     <div className="not-found-container">
       <img src={emptyPlate} className="not-found-image" alt="" />
       <h1 className="not-founded-header">{message ? message : "Oh no!"}</h1>
-      <p>{explanation ? explanation : "Something wen't wrong"}</p>
+      <p>{explanation ? explanation : "Something went wrong"}</p>
       <Link to="/">Go Back</Link>
     </div>
   );
