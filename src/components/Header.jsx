@@ -17,8 +17,8 @@ function Header({ handleSearch }) {
 
   const images = [
     'https://i.pinimg.com/736x/66/8e/fa/668efa8812eb00b4fcd534bfb314e252.jpg',
-    'https://i.pinimg.com/564x/4b/36/ab/4b36ab68b620383dc87698126aa578a0.jpg', 
-    'https://img.freepik.com/fotos-premium/mercado-de-acoes-ou-grafico-de-negociacao-forex_73426-123.jpg?w=1800',
+    'https://i.pinimg.com/564x/8e/d7/a2/8ed7a26edb71c9b339ada7cb674dd73c.jpg', 
+    'https://i.pinimg.com/564x/8a/62/0b/8a620ba07756323158aa1dea752682ad.jpg',
     'https://i.pinimg.com/564x/88/da/49/88da490359e69f2885830f25669991fa.jpg'
   ];
 
