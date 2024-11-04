@@ -16,7 +16,7 @@ function Header({ handleSearch }) {
   };
 
   const images = [
-    'https://i.pinimg.com/736x/66/8e/fa/668efa8812eb00b4fcd534bfb314e252.jpg',
+    'https://i.pinimg.com/564x/f3/3a/6c/f33a6c59bdb26fcfc885c001c0ac88a5.jpg',
     'https://i.pinimg.com/564x/8e/d7/a2/8ed7a26edb71c9b339ada7cb674dd73c.jpg', 
     'https://i.pinimg.com/564x/8a/62/0b/8a620ba07756323158aa1dea752682ad.jpg',
     'https://i.pinimg.com/564x/88/da/49/88da490359e69f2885830f25669991fa.jpg'
