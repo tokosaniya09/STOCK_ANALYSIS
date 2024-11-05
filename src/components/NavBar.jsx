@@ -16,28 +16,26 @@ export default function NavBar() {
         <Link className="link" to="/stockinfo">Stock Info</Link>
         <Link className="link" to="/developers">Developers Page</Link>
       </div>
-    </nav>
         <div>
-              <SignedOut>
-                  <SignInButton>
-                  <button className="button">
-                      SignUp
-                  </button>
-                  </SignInButton>
-              </SignedOut>
-          </div>
-          <div>
-              <SignedIn>
-                  <UserButton 
-                      appearance={{
-                      elements: {
-                          rootBox: "w-full h-full flex justify-center items-center",
-                          userButtonAvatarBox: "w-10 h-10", 
-                      },
-                      }} 
-                  />
-              </SignedIn>
-          </div>
+            <SignedOut>
+                <SignInButton>
+                <button className="button">
+                    SignUp
+                </button>
+                </SignInButton>
+            </SignedOut>
+        </div>
+        <div>
+            <SignedIn>
+                <UserButton 
+                    appearance={{
+                    elements: {
+                        rootBox: "w-full h-full flex justify-center items-center",
+                        userButtonAvatarBox: "w-10 h-10", 
+                    },
+                    }} 
+                />
+            </SignedIn>
         </div>
       </nav>
   );
