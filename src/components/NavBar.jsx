@@ -14,6 +14,9 @@ export default function NavBar() {
         <Link className="link" to="/">Home</Link>
         <Link className="link" to="/about">About</Link>
         <Link className="link" to="/stockinfo">Stock Info</Link>
+        <Link className="link" to="/developers">Developers Page</Link>
+      </div>
+    </nav>
         <div>
               <SignedOut>
                   <SignInButton>

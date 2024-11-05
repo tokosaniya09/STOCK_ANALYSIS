@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
 
-@import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -486,15 +488,13 @@ nav a {
 }
 
 .foo1 {
+  font-size: 25px;
   font-size: 30px;
   margin-left: 40px;
-  /* border: 1px solid black; */
 }
 
 .foo2 {
   width: 100%;
-  margin-left: 100px;
-  /* border: 1px solid black; */
 }
 
 .foo2 .header-input-container {
@@ -511,6 +511,7 @@ nav a {
   padding-top: 10px;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 
 .foo4 {
