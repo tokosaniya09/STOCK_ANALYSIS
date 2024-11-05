@@ -7,9 +7,9 @@ export default function Card({ recipe }) {
       <div className="card-content">
         <h3>{name}</h3>
         <div className="card-info">
-          <p>Price: ${price}</p>
-          <p>Change: {changePercent}%</p>
-          {regularmarketchange && <p>Market Change: {regularmarketchange}</p>}
+          <p>Price : ${price}</p>
+          <p>Change : {changePercent}%</p>
+          {regularmarketchange && <p>Market Change : {regularmarketchange}</p>}
         </div>
       </div>
     </div>

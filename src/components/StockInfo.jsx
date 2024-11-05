@@ -62,7 +62,6 @@ const StockInfo = () => {
   }, [])
   return (
     <div className="about stock">
-      {/* <img src={stockInfo} alt="" /> */}
       <div>
         <h1 >Stock Market Basics</h1>
         <p >

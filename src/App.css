@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", sanscard-info-serif;
   font-weight: 400;
   font-style: normal;
   color: white;
@@ -189,7 +189,7 @@
 }
 
 .card {
-  width: 275px;
+  /* width: 275px; */
   border-radius: 20px;
   overflow: hidden;
   background-color: rgb(11, 26, 50);
@@ -197,7 +197,12 @@
   border: 1px solid white;
   margin-bottom: 50px;
   cursor: pointer;
-  color: #000;
+  display: flexbox;
+}
+
+.card:active {
+  scale: 0.9;
+  transition-duration: 0.5s;
 }
 
 .card img {
@@ -206,15 +211,13 @@
 }
 
 .card-content {
-  padding: 10px
+  padding: 10px;
 }
 
 .card-content h3 {
-  height: 30px;
-}
-
-.card-content h3 {
-  font-size: 15px;
+  text-transform: capitalize;
+  font-size: larger;
+  margin-bottom: 20px;
 }
 
 .card .tag {
@@ -227,9 +230,11 @@
 }
 
 .card-info {
-  display: flex;
-  margin-top: 15px;
-  justify-content: space-between;
+  display: flexbox;
+}
+
+.card-info p {
+  padding-bottom: 5px;
 }
 
 .time-text {
