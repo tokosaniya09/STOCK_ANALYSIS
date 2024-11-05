@@ -192,10 +192,12 @@
   width: 275px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(11, 26, 50);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.16);
+  border: 1px solid white;
   margin-bottom: 50px;
   cursor: pointer;
+  color: #000;
 }
 
 .card img {

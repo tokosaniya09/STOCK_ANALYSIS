@@ -27,9 +27,9 @@ export default function Footer() {
             <div className="foo3">
                 <p>Follow us on : </p>
                 <div className="allIcons">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <i className="fa-brands fa-instagram"></i>
+                    <i className="fa-brands fa-facebook"></i>
+                    <i className="fa-brands fa-twitter"></i>
                 </div>
             </div>
             <div className="foo4">
