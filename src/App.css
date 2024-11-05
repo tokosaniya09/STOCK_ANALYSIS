@@ -162,6 +162,16 @@
   font-size: 20px;
 }
 
+.button {
+  background-color: blue;
+  outline: none;
+  border: none;
+  padding: 10px;
+  background-color: rgb(58, 87, 128);
+  border: 1px solid rgb(30, 13, 92);
+  border-radius: 30px;
+}
+
 .header-input-container button:hover {
   box-shadow: 1px 1px 10px rgba(246, 231, 231, 0.042);
 }
@@ -184,10 +194,12 @@
   width: 275px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: white;
+  background-color: rgb(11, 26, 50);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.16);
+  border: 1px solid white;
   margin-bottom: 50px;
   cursor: pointer;
+  color: #000;
 }
 
 .card img {
@@ -417,6 +429,7 @@ nav a {
 
 .navBar {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -446,8 +459,6 @@ nav a {
 .reveal.active {
   opacity: 1;
   visibility: hidden;
-
-  /* initially pause animatable objects their animations */
   animation-play-state: paused;
 }
 
@@ -466,18 +477,19 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  gap: 200px;
+  padding: 25px 50px;
+  gap: 20px;
   font-size: 17px;
 }
 
 .foo1 {
   font-size: 25px;
+  font-size: 30px;
+  margin-left: 40px;
 }
 
 .foo2 {
   width: 100%;
-  font-size: 18px;
 }
 
 .foo2 .header-input-container {
@@ -487,6 +499,7 @@ nav a {
 
 .foo3 {
   width: 25%;
+  /* border: 1px solid black; */
 }
 
 .allIcons {
@@ -498,4 +511,5 @@ nav a {
 
 .foo4 {
   width: 50%;
+  /* border: 1px solid black; */
 }

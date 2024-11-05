@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react'
 
 export default function NavBar() {
   return (
@@ -16,26 +17,28 @@ export default function NavBar() {
         <Link className="link" to="/developers">Developers Page</Link>
       </div>
     </nav>
+        <div>
+              <SignedOut>
+                  <SignInButton>
+                  <button className="button">
+                      SignUp
+                  </button>
+                  </SignInButton>
+              </SignedOut>
+          </div>
+          <div>
+              <SignedIn>
+                  <UserButton 
+                      appearance={{
+                      elements: {
+                          rootBox: "w-full h-full flex justify-center items-center",
+                          userButtonAvatarBox: "w-10 h-10", 
+                      },
+                      }} 
+                  />
+              </SignedIn>
+          </div>
+        </div>
+      </nav>
   );
 }
-
-// import { Link } from "react-router-dom";
-// import logo from "../assets/logo.png";
-
-// export default function NavBar() {
-//   return (
-//     <nav className="bg-white shadow-md">
-//       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
-//         <img className="w-12 h-12" src={logo} alt="Logo" />
-//         <h1 className="text-xl font-bold">Stock Trekker</h1>
-//       </div>
-
-//       <div className="max-w-7xl mx-auto flex justify-center space-x-4 p-2">
-//         <Link className="link text-gray-700 hover:text-blue-500" to="/">Home</Link>
-//         <Link className="link text-gray-700 hover:text-blue-500" to="/about">About</Link>
-//         <Link className="link text-gray-700 hover:text-blue-500" to="/stockinfo">Stock Info</Link>
-//       </div>
-//     </nav>
-//   );
-// }
-

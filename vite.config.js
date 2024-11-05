@@ -10,4 +10,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // '@' now points to 'src'
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''), // Removes "/api" prefix when forwarding to the backend
+      },
+    },
+  },
 });
