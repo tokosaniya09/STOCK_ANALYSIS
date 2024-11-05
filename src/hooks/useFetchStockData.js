@@ -1,13 +1,19 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
+// const stockSymbols = [
+//   "RELIANCE", "TCS", "HDFCBANK", "INFY", "HINDUNILVR", "ICICIBANK", "SBIN", "KOTAKBANK", "BHARTIARTL", "ITC",
+//   "HDFC", "BAJFINANCE", "ADANIGREEN", "ADANITRANS", "HCLTECH", "WIPRO", "ASIANPAINT", "ONGC", "DMART", "ULTRACEMCO",
+//   "AXISBANK", "TATAMOTORS", "LT", "MARUTI", "TITAN", "NTPC", "BAJAJFINSV", "POWERGRID", "INDUSINDBK", "SUNPHARMA",
+//   "JSWSTEEL", "TATASTEEL", "ADANIPORTS", "DIVISLAB", "NESTLEIND", "HINDALCO", "GRASIM", "BPCL", "HEROMOTOCO", "BAJAJ-AUTO",
+//   "APOLLOHOSP", "COALINDIA", "BRITANNIA", "TECHM", "VEDL", "M&M", "DRREDDY", "EICHERMOT", "CIPLA", "ICICIPRULI", "MUTHOOTFIN"
+// ];
+
+
 const stockSymbols = [
-  "RELIANCE", "TCS", "HDFCBANK", "INFY", "HINDUNILVR", "ICICIBANK", "SBIN", "KOTAKBANK", "BHARTIARTL", "ITC",
-  "HDFC", "BAJFINANCE", "ADANIGREEN", "ADANITRANS", "HCLTECH", "WIPRO", "ASIANPAINT", "ONGC", "DMART", "ULTRACEMCO",
-  "AXISBANK", "TATAMOTORS", "LT", "MARUTI", "TITAN", "NTPC", "BAJAJFINSV", "POWERGRID", "INDUSINDBK", "SUNPHARMA",
-  "JSWSTEEL", "TATASTEEL", "ADANIPORTS", "DIVISLAB", "NESTLEIND", "HINDALCO", "GRASIM", "BPCL", "HEROMOTOCO", "BAJAJ-AUTO",
-  "APOLLOHOSP", "COALINDIA", "BRITANNIA", "TECHM", "VEDL", "M&M", "DRREDDY", "EICHERMOT", "CIPLA", "ICICIPRULI", "MUTHOOTFIN"
+  "RELIANCE", "TCS", "HDFCBANK"
 ];
+
 
 
 const useFetchStockData = () => {
@@ -28,8 +34,8 @@ const useFetchStockData = () => {
             symbol: 'AAPL'
           },
           headers: {
-            'x-rapidapi-key': '1f90578396msh23e090395fe178dp1a1224jsn46abddb76c39',
-            'x-rapidapi-host': 'yahoo-finance166.p.rapidapi.com'
+    'x-rapidapi-key': '34057316f0mshc853487cd4b05ddp1ee002jsn2a56cf7a3022',
+    'x-rapidapi-host': 'yahoo-finance166.p.rapidapi.com'
           },
         });
 
