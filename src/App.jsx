@@ -4,7 +4,9 @@ import NavBar from "./components/NavBar";
 import StockInfo from "./components/StockInfo"; 
 import Home from "./pages/HomePage";
 import Footer from "./components/Footer"; 
+import { Outlet } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
+import { ClerkProvider } from '@clerk/clerk-react';
 
 function App() {
   return (
@@ -12,12 +14,7 @@ function App() {
         <div className="container">
           <NavBar />
           <main className="main_container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/stockinfo" element={<StockInfo />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="*" element={<div>Page Not Found</div>} />
-            </Routes>
+            <Outlet/>
           </main>
           <Footer/>
         </div>

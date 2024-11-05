@@ -15,6 +15,14 @@ import Ingredients from "./components/Ingredient.jsx";
 import Instructions from "./components/Instruction.jsx";
 import StockInfo from "./components/StockInfo.jsx";
 import "./index.css";
+import { ClerkProvider } from '@clerk/clerk-react'
+
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error('Add your Clerk publishable key to the .env.local file')
+}
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +38,19 @@ const router = createBrowserRouter(
   )
 );
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <ClerkProvider
+      appearance={{
+        baseTheme: 'dark'
+      }}
+      publishableKey={PUBLISHABLE_KEY}
+      afterSignOutUrl="/"
+      showname="true"
+    >
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </ClerkProvider>
+  </React.StrictMode>
+)
