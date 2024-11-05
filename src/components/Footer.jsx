@@ -1,4 +1,6 @@
 import { useState } from "react";
+import SubscribeForm from "./SubscribeForm";
+
 export default function Footer() {
     const [searchTerm, setSearchTerm] = useState("");
     const mail = () => {
@@ -10,7 +12,7 @@ export default function Footer() {
             <div className="foo2">
                 <p>Subscribe to us : </p>
                 <div className="header-input-container">
-                    <input
+                    {/* <input
                         type="text"
                         placeholder="Your mail"
                         onChange={(e) => setSearchTerm(e.target.value)}
@@ -18,7 +20,8 @@ export default function Footer() {
                     />
                     <br/>
                     <br/>
-                    <button onClick={mail}>Subscribe</button>
+                    <button onClick={mail}>Subscribe</button> */}
+                    <SubscribeForm/>
                 </div>
             </div>
             <div className="foo3">
