@@ -15,6 +15,7 @@ import Ingredients from "./components/Ingredient.jsx";
 import Instructions from "./components/Instruction.jsx";
 import StockInfo from "./components/StockInfo.jsx";
 import "./index.css";
+import Developers from "./components/Developers.jsx";
 import { ClerkProvider } from '@clerk/clerk-react'
 
 
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
         <Route path="/recipe/:id/ingredients" element={<Ingredients />} />
         <Route path="/recipe/:id/instructions" element={<Instructions />} />
       </Route>
+      <Route path="/developers" element={Developers}></Route>
     </Route>
   )
 );
