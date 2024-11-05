@@ -16,7 +16,6 @@ export default function NavBar() {
         <Link className="link" to="/stockinfo">Stock Info</Link>
         <Link className="link" to="/developers">Developers Page</Link>
       </div>
-    </nav>
         <div>
               <SignedOut>
                   <SignInButton>
@@ -38,7 +37,6 @@ export default function NavBar() {
                   />
               </SignedIn>
           </div>
-        </div>
       </nav>
   );
 }
