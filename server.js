@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 // Endpoint to handle subscriptions
 app.post('/api/subscribe', async (req, res) => {
-    console.log('Received subscription request:', req.body); // Log the incoming request
+    // console.log('Received subscription request:', req.body); // Log the incoming request
 
     const { email } = req.body;
 

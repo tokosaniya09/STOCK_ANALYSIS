@@ -120,35 +120,33 @@ function Header({ handleSearch }) {
   const componentsArray = new Array(4).fill(null);
 
   return (
-    <header className="main_header flex flex-col md:flex-row items-center md:items-start justify-between p-4 md:p-8 bg-gray-900 text-white">
-      <div className="text-container flex-1 md:mr-8 mb-6 md:mb-0">
-        <h1 className="header-title text-3xl md:text-5xl font-bold mb-2 md:mb-4 text-center md:text-left">
-          Chase the <span className="span text-blue-400">Stock</span> Thrill
+    <header className="main_header">
+      <div>
+        <h1 className="header-title">
+          Chase the <span className="span">Stock</span> Thrill
         </h1>
-        <p className="header-description text-base md:text-lg text-center md:text-left mb-4">
+        <p className="header-description">
           Invest smarter, profit faster—your journey starts here
         </p>
-        <div className="header-input-container flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4">
+        <div className="header-input-container">
           <input
             type="text"
             placeholder="Search a stock..."
             onChange={(e) => setSearchTerm(e.target.value)}
             value={searchTerm}
-            className="w-full md:w-64 p-2 rounded border border-gray-300 text-gray-800"
           />
           <button 
             onClick={handleClick}
-            className="w-full md:w-auto px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
             Search
           </button>
         </div>
       </div>
-      <div className="main_img-container w-full md:w-1/2 flex justify-center md:justify-end">
+      <div className="main_img-container">
         <img 
           src={images[currImgIdx]} 
           alt="slideshow" 
-          className="main_img w-full h-64 md:h-80 rounded-lg object-cover"
+          className="main_img"
         />
       </div>
     </header>
