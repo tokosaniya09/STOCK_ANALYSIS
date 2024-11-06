@@ -18,7 +18,7 @@ const useFetchStockData = () => {
           url: "https://yahoo-finance166.p.rapidapi.com/api/stock/get-price",
           params: { region: "US", symbol },
           headers: {
-'x-rapidapi-key': '15f88f2c43msh9c5419a49922a46p10fdc8jsn9ea437a15245',
+'x-rapidapi-key': '9caa421f1bmshd102c7216130f12p1d05cejsne42bfefc508e',
     'x-rapidapi-host': 'yahoo-finance166.p.rapidapi.com'
           },
         });
