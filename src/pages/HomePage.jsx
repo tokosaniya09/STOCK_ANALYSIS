@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Loading from "../components/Loading";
 import useFetchStockData from "../hooks/useFetchStockData"; 
 import useFetchStockForecast from "../hooks/useFetchStockForecast"; 
+import Caps from "@/components/Caps";
 
 export default function HomePage() {
   const [fetchStockData, { data, loading, error }] = useFetchStockData();
@@ -31,6 +32,7 @@ export default function HomePage() {
       {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>} {/* Display forecast */}
       {error && <p>{error}</p>}
       {forecastError && <p>{forecastError}</p>} {/* Show forecast error */}
+      <Caps/>
     </>
   );
 }

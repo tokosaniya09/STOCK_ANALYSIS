@@ -14,6 +14,7 @@
   font-weight: 400;
   font-style: normal;
   color: white;
+  /* mix-blend-mode: difference; */
   user-select: none;
 }
 
@@ -98,7 +99,7 @@
 .header-title {
   color: rgb(255, 255, 255);
   font-weight: 800;
-  font-size: 100px
+  font-size: 15vmin;
 }
 
 .header-title span {
@@ -438,6 +439,12 @@ nav a {
   gap: 1.5rem;
 }
 
+@media (max-widht: 100px) {
+  .navBar {
+    
+  }
+}
+
 .navTop {
   display: flex;
   align-items: center;
@@ -517,4 +524,78 @@ nav a {
 .foo4 {
   width: 50%;
   /* border: 1px solid black; */
+}
+
+.caps-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgb(11, 26, 50);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: #515152 1px solid;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3d3d3d;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button.active {
+  background-color: #073362;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* background-color: #073362; */
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: #073362;
+}
+
+thead th {
+  background-color: #0f172a;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+td.positive {
+  color: green;
+  font-weight: bold;
+}
+
+td.negative {
+  color: red;
+  font-weight: bold;
 }

@@ -17,6 +17,7 @@ import StockInfo from "./components/StockInfo.jsx";
 import "./index.css";
 import Developers from "./components/Developers.jsx";
 import { ClerkProvider } from '@clerk/clerk-react'
+// import StockForecastPage from "./pages/StockForecastPage"; 
 
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -35,7 +36,8 @@ const router = createBrowserRouter(
         <Route path="/recipe/:id/ingredients" element={<Ingredients />} />
         <Route path="/recipe/:id/instructions" element={<Instructions />} />
       </Route>
-      <Route path="/developers" element={Developers}></Route>
+      <Route path="/developers" element={<Developers/>}></Route>
+      {/* <Route path="/stock/:symbol" element={<StockForecastPage />} /> */}
     </Route>
   )
 );
