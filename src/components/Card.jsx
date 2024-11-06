@@ -8,7 +8,6 @@ export default function Card({ recipe }) {
   const navigateToRecipePage = () => {
     navigate(`/recipe/${issue_price}/instructions`);
   };
-
   return (
     <div
       className="card bg-white rounded-lg shadow-md p-4 cursor-pointer hover:shadow-lg transition-shadow duration-200 transform hover:scale-105 sm:p-6 md:flex md:items-center md:space-x-4"
@@ -30,4 +29,3 @@ export default function Card({ recipe }) {
     </div>
   );
 }
-
