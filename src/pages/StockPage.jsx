@@ -1,18 +1,17 @@
-// RecipePage.jsx
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
-import StockChart from "../components/StockChart"; // Import the reusable StockChart
-import useFetchRecipe from "../hooks/useFetchRecipe";
+import StockChart from "../components/StockChart"; 
+import useFetchStock from "../hooks/useFetchStock";
 
-export default function RecipePage() {
+export default function StockPage() {
   const { id } = useParams();
   console.log(id);
-  const [fetchStockData, { data, loading, error }] = useFetchRecipe();
+  const [fetchStockData, { data, loading, error }] = useFetchStock();
 
   useEffect(() => {
-    fetchStockData(id); // Fetch the stock or recipe data when ID changes
+    fetchStockData(id); 
   }, [id]);
 
   console.log(data);
@@ -21,11 +20,9 @@ export default function RecipePage() {
   if (error) return <Error explanation={error} />;
   if (data?.errors) return <Error explanation="Recipe not found" />;
 
-  // Use sample data if no forecast data is available
   const sampleForecastData = [223.45, 224.9, 226.34, 225.89, 228.5];
   const emaValues = data?.emaValues || sampleForecastData;
 
-  // Generate labels for x-axis (e.g., 'Day 1', 'Day 2', etc.)
   const labels = emaValues.map((_, index) => `Day ${index + 1}`);
 
   return (
@@ -33,11 +30,11 @@ export default function RecipePage() {
       <h1>Stock Forecast for {id}</h1>
       {data && (
         <StockChart
-          title={`Stock Forecast for ${id}`} // You can keep title here if needed for styling
+          title={`Stock Forecast for ${id}`} 
           yLabel="Price (USD)"
-          labels={labels}  // Pass the labels to StockChart
+          labels={labels} 
           dataset={[
-            { label: "5-Day Predicted Values", data: emaValues, borderColor: "orange" },  // Only EMA
+            { label: "5-Day Predicted Values", data: emaValues, borderColor: "orange" }, 
           ]}
         />
       )}

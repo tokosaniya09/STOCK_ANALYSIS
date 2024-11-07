@@ -1,83 +1,5 @@
-// // useFetchRecipe.js
-// import axios from "axios";
-// import { useReducer } from "react";
-
-// const options = {
-//   method: "GET",
-//   url: "https://tasty.p.rapidapi.com/recipes/get-more-info",
-//   headers: {
-//     "x-rapidapi-key": "15f88f2c43msh9c5419a49922a46p10fdc8jsn9ea437a15245",
-//     "x-rapidapi-host": "yahoo-finance166.p.rapidapi.com",
-//   },
-// };
-
-// const initialState = {
-//   data: null,
-//   loading: false,
-//   error: null,
-// };
-
-// const Action = {
-//   FETCHING_DATA: "FETCHING_DATA",
-//   FETCH_SUCCESSFUL: "FETCH_SUCCESSFUL",
-//   FETCH_ERROR: "FETCH_ERROR",
-// };
-
-// const reducer = (_, action) => {
-//   switch (action.type) {
-//     case Action.FETCHING_DATA:
-//       return { data: null, error: null, loading: true };
-//     case Action.FETCH_SUCCESSFUL:
-//       return { error: null, loading: false, data: action.payload };
-//     case Action.FETCH_ERROR:
-//       return { error: action.payload, data: null, loading: false };
-//     default:
-//       return initialState;
-//   }
-// };
-
-// // EMA calculation function
-// function calculateEMA(data, period) {
-//   const k = 2 / (period + 1);
-//   let emaArray = [data[0]]; // Start EMA with the first price as the initial EMA
-
-//   for (let i = 1; i < data.length; i++) {
-//     emaArray.push(data[i] * k + emaArray[i - 1] * (1 - k));
-//   }
-
-//   return emaArray;
-// }
-
-// const useFetchRecipe = () => {
-//   const [{ data, loading, error }, dispatch] = useReducer(reducer, initialState);
-
-//   const fetchRecipe = async (id) => {
-//     dispatch({ type: Action.FETCHING_DATA });
-//     try {
-//       const reqOptions = { ...options, params: { id } };
-//       const response = await axios.request(reqOptions);
-
-//       const prices = response.data.prices; // Assume `prices` is an array of historical prices
-//       const emaValues = calculateEMA(prices, 10); // Calculate 10-day EMA
-
-//       dispatch({
-//         type: Action.FETCH_SUCCESSFUL,
-//         payload: { ...response.data, prices, emaValues },
-//       });
-//     } catch (err) {
-//       dispatch({ type: Action.FETCH_ERROR, payload: err.message });
-//     }
-//   };
-
-//   return [fetchRecipe, { data, loading, error }];
-// };
-
-// export default useFetchRecipe;
-
-import axios from "axios";
 import { useReducer } from "react";
 
-// Stock data as an array of objects (represents the stock data)
 const stockData = [
   { name: "Apple Inc.", symbol: "AAPL", price: 223.45, changePercent: 0.0064862054, regularmarketchange: 1.4400024, prices: [223.45, 228.5, 225.89, 224.9, 226.34] },
   { name: "Microsoft Corporation", symbol: "MSFT", price: 411.46, changePercent: 0.007344661, regularmarketchange: 3, prices: [430.5, 432.75, 435.0, 425.0, 431.46] },
@@ -95,25 +17,18 @@ const stockData = [
   { name: "Walt Disney Company (The)", symbol: "DIS", price: 96.63, changePercent: 0.008769141, regularmarketchange: 0.839996, prices: [97.5, 96.0, 98.0, 98.5, 98.6] },
 ];
 
-
-
-
-
-// Initial state for the reducer
 const initialState = {
   data: null,
   loading: false,
   error: null,
 };
 
-// Action types
 const Action = {
   FETCHING_DATA: "FETCHING_DATA",
   FETCH_SUCCESSFUL: "FETCH_SUCCESSFUL",
   FETCH_ERROR: "FETCH_ERROR",
 };
 
-// Reducer function to handle loading states and data updates
 const reducer = (_, action) => {
   switch (action.type) {
     case Action.FETCHING_DATA:
@@ -127,10 +42,9 @@ const reducer = (_, action) => {
   }
 };
 
-// EMA calculation function
 function calculateEMA(data, period) {
   const k = 2 / (period + 1);
-  let emaArray = [data[0]]; // Start EMA with the first price as the initial EMA
+  let emaArray = [data[0]]; 
 
   for (let i = 1; i < data.length; i++) {
     emaArray.push(data[i] * k + emaArray[i - 1] * (1 - k));
@@ -139,14 +53,12 @@ function calculateEMA(data, period) {
   return emaArray;
 }
 
-const useFetchRecipe = () => {
+const useFetchStock = () => {
   const [{ data, loading, error }, dispatch] = useReducer(reducer, initialState);
 
-  // Fetch stock data by stock symbol
   const fetchRecipe = async (id) => {
     dispatch({ type: Action.FETCHING_DATA });
     try {
-      // Find the stock by name (case-insensitive comparison)
       const stock = stockData.find((stock) =>
         stock.name.toLowerCase().trim() === id.toLowerCase().trim()
       );
@@ -155,10 +67,8 @@ const useFetchRecipe = () => {
         throw new Error("Stock not found");
       }
   
-      // Calculate the EMA values based on historical prices
-      const emaValues = calculateEMA(stock.prices, 10); // 10-day EMA
+      const emaValues = calculateEMA(stock.prices, 10); 
   
-      // Dispatch successful data fetch
       dispatch({
         type: Action.FETCH_SUCCESSFUL,
         payload: { ...stock, emaValues },
@@ -174,4 +84,4 @@ const useFetchRecipe = () => {
   return [fetchRecipe, { data, loading, error }];
 };
 
-export default useFetchRecipe;
+export default useFetchStock;

@@ -9,15 +9,12 @@ import {
 import App from "./App.jsx";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
-import RecipePage from "./pages/RecipePage";
+import StockPage from "./pages/StockPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
-import Ingredients from "./components/Ingredient.jsx";
-import Instructions from "./components/Instruction.jsx";
 import StockInfo from "./components/StockInfo.jsx";
 import "./index.css";
 import Developers from "./components/Developers.jsx";
-import { ClerkProvider } from '@clerk/clerk-react'
-// import StockForecastPage from "./pages/StockForecastPage"; 
+import { ClerkProvider } from '@clerk/clerk-react';
 
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -32,10 +29,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/stockinfo" element={<StockInfo />} />
-      <Route path="/recipe/:id" element={<RecipePage />}>
-        <Route path="/recipe/:id/ingredients" element={<Ingredients />} />
-        <Route path="/recipe/:id/instructions" element={<Instructions />} />
-      </Route>
+      <Route path="/recipe/:id" element={<StockPage />} />
       <Route path="/developers" element={<Developers/>}></Route>
     </Route>
   )

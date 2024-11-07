@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +9,6 @@
   font-weight: 400;
   font-style: normal;
   color: white;
-  /* color: #000; */
-  /* mix-blend-mode: difference; */
-  /* user-select: none; */
 }
 
 .custom-loader {
@@ -55,7 +47,6 @@
 }
 
 .App {
-  /* background-color: rgb(2, 0, 60); */
   margin: 0 auto;
   min-height: 100vh;
 }
@@ -95,7 +86,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: #0f172a; /* Tailwind's slate-950 */
+  background-color: #0f172a;
 }
 
 
@@ -186,7 +177,6 @@
   transition-duration: .5s;
 }
 
-
 .cards {
   margin-top: 100px;
   display: flex;
@@ -195,7 +185,6 @@
 }
 
 .card {
-  /* width: 275px; */
   border-radius: 20px;
   overflow: hidden;
   background-color: rgb(11, 26, 50);
@@ -263,10 +252,6 @@
   padding: 10px 0;
   font-size: 50px;
 }
-
-
-
-/* RECIPE PAGE */
 
 .recipe-header {
   width: 600px;
@@ -467,7 +452,6 @@ nav a {
   right: 10px;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .navBar {
     display: none;
@@ -496,10 +480,6 @@ nav a {
     right: 1rem;
   }
 
-  /* .navTop h1 {
-    margin-right: 4rem;
-  } */
-
   .close-icon {
     display: block;
   }
@@ -516,12 +496,6 @@ nav a {
 .link:active {
   color: #bec0c3;
   scale: 0.9;
-}
-
-.reveal.active {
-  opacity: 1;
-  visibility: hidden;
-  animation-play-state: paused;
 }
 
 @keyframes fadeInUp {
@@ -547,22 +521,7 @@ nav a {
 .foo1 {
   font-size: 25px;
   font-size: 30px;
-  /* margin-left: 40px; */
 }
-
-/* .foo2 {
-  width: 100%;
-} */
-/* 
-.foo2 .header-input-container {
-  margin: 10px;
-  margin-left: 0;
-} */
-
-/* .foo3 {
-  width: 25%;
-  border: 1px solid black;
-} */
 
 .allIcons {
   padding-top: 10px;
@@ -570,11 +529,6 @@ nav a {
   gap: 10px;
   cursor: pointer;
 }
-
-/* .foo4 {
-  width: 50%;
-  border: 1px solid black;
-} */
 
 .caps-container {
   width: 100%;
@@ -617,7 +571,6 @@ button:hover {
 .stock-table {
   width: 100%;
   border-collapse: collapse;
-  /* background-color: #073362; */
 }
 
 th, td {
@@ -650,14 +603,8 @@ td.negative {
   font-weight: bold;
 }
 
-/* .send {
-  background-color: #0f172a;
-  color: #000;
-} */
-
 .f input {
   background-color: #0f172a;
-  /* color: #000; */
   outline: none;
   border: 1px solid rgb(144, 141, 141); 
   padding: 10px;
