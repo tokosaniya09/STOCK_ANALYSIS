@@ -49,12 +49,13 @@
 .App {
   margin: 0 auto;
   min-height: 100vh;
+  max-width: 100%;
 }
 
 .main_container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 200px 0 50px 0;
+  padding: 150px 0 50px 0;
 }
 
 .main_header {
@@ -463,6 +464,10 @@ nav a {
     background-color: #0f172a;
     padding: 1rem;
     z-index: 10;
+  }
+
+  .container {
+    width: 138%;
   }
 
   .main_img {
