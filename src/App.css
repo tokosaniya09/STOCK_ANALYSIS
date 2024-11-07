@@ -14,6 +14,7 @@
   font-weight: 400;
   font-style: normal;
   color: white;
+  /* color: #000; */
   /* mix-blend-mode: difference; */
   /* user-select: none; */
 }
@@ -536,7 +537,7 @@ nav a {
 
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 25px 50px;
   gap: 20px;
@@ -546,22 +547,22 @@ nav a {
 .foo1 {
   font-size: 25px;
   font-size: 30px;
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 
-.foo2 {
+/* .foo2 {
   width: 100%;
-}
-
+} */
+/* 
 .foo2 .header-input-container {
   margin: 10px;
   margin-left: 0;
-}
+} */
 
-.foo3 {
+/* .foo3 {
   width: 25%;
-  /* border: 1px solid black; */
-}
+  border: 1px solid black;
+} */
 
 .allIcons {
   padding-top: 10px;
@@ -570,10 +571,10 @@ nav a {
   cursor: pointer;
 }
 
-.foo4 {
+/* .foo4 {
   width: 50%;
-  /* border: 1px solid black; */
-}
+  border: 1px solid black;
+} */
 
 .caps-container {
   width: 100%;
@@ -647,4 +648,22 @@ td.positive {
 td.negative {
   color: red;
   font-weight: bold;
+}
+
+/* .send {
+  background-color: #0f172a;
+  color: #000;
+} */
+
+.f input {
+  background-color: #0f172a;
+  /* color: #000; */
+  outline: none;
+  border: 1px solid rgb(144, 141, 141); 
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.f .send:active {
+  scale: 0.9;
 }

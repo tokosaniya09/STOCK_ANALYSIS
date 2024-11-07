@@ -98,7 +98,8 @@ import Caps from "@/components/Caps";
 export default function HomePage() {
   const [fetchStockData, { data, loading, error }] = useFetchStockData();
   // const [fetchStockForecast, { forecastData, loading: loadingForecast, error: forecastError }] = useFetchStockForecast();
-  // const [searchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
+  const [searchTerm, setSearchTerm] = useState("");
 
   // useEffect(() => {
   //   fetchStockData(); // Call fetchStockData without any parameters
@@ -109,6 +110,7 @@ export default function HomePage() {
       fetchStockData(searchTerm);
       // fetchStockForecast(searchTerm); // Fetch forecast data as well
     }
+    setSearchTerm(searchTerm)
   };
 
   // Filter data based on the search term
@@ -117,15 +119,25 @@ export default function HomePage() {
   );
 
   return (
-    <>
-      <Header handleSearch={handleSearch} />
-      {loading && <Loading />}
-      {/* {loadingForecast && <Loading />} Show loading for forecast */}
-      {data && <CardList recipes={data} />}
-      {/* {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>} Display forecast */}
-      {error && <p>{error}</p>}
-      {/* {forecastError && <p>{forecastError}</p>} Show forecast error */}
-      <Caps/>
-    </>
+    <div className="home">
+        <Header handleSearch={handleSearch} />
+        {loading && data.length === 0 && <Loading />} {/* Show Loading only if no data is loaded */}
+        {/* {loadingForecast && <Loading />} Loading for forecast */}
+        {filteredData.length > 0 && <CardList recipes={filteredData} />}
+        {/* {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>} */}
+        {error && <p>{error}</p>}
+        {/* {forecastError && <p>{forecastError}</p>} */}
+        <Caps/>
+   </div>
+    // <>
+    //   <Header handleSearch={handleSearch} />
+    //   {loading && <Loading />}
+    //   {/* {loadingForecast && <Loading />} Show loading for forecast */}
+    //   {data && <CardList recipes={data} />}
+    //   {/* {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>} Display forecast */}
+    //   {error && <p>{error}</p>}
+    //   {/* {forecastError && <p>{forecastError}</p>} Show forecast error */}
+    //   <Caps/>
+    // </>
   );
 }

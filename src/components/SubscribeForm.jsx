@@ -22,15 +22,19 @@ const SubscribeForm = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
+    <div className="f">
+        <form ref={form} onSubmit={sendEmail}>
       <label>Email</label>
       <br/>
       <br/>
       <input type="email" name="user_email" />
       <br/>
       <br/>
-      <input type="submit" value="Send" />
+      <div className="send">
+          <input type="submit" value="Subscribe" />
+      </div>
     </form>
+    </div>
   );
 };
 
