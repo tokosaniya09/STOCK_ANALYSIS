@@ -18,7 +18,7 @@ Welcome to **Stock Trekker**—a straightforward and accessible platform for tra
 
 Codeteria is powered by modern technologies to ensure a seamless experience:
 
-- **Frontend**: React, TailwindCSS, Chart.js
+- **Frontend**: React, CSS, Chart.js
 - **Backend**: Clerk, EmailJS
 - **API**: Yahoo Finance
 - **Deployment**: Netlify
