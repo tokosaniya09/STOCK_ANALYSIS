@@ -37,7 +37,6 @@ const router = createBrowserRouter(
         <Route path="/recipe/:id/instructions" element={<Instructions />} />
       </Route>
       <Route path="/developers" element={<Developers/>}></Route>
-      {/* <Route path="/stock/:symbol" element={<StockForecastPage />} /> */}
     </Route>
   )
 );

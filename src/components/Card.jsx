@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function Card({ recipe }) {
   // console.log("stock.name", recipe.name, "stock.regular", recipe.regularmarketchange);
   const { name, price, changePercent, regularmarketchange } = recipe;
-  console.log("bla",name, price, changePercent, regularmarketchange);
+  // console.log("bla",name, price, changePercent, regularmarketchange);
   const navigate = useNavigate();
 
   const navigateToRecipePage = () => {

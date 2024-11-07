@@ -97,17 +97,18 @@ import Caps from "@/components/Caps";
 
 export default function HomePage() {
   const [fetchStockData, { data, loading, error }] = useFetchStockData();
-  const [fetchStockForecast, { forecastData, loading: loadingForecast, error: forecastError }] = useFetchStockForecast();
-  const [searchParams] = useSearchParams();
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [fetchStockForecast, { forecastData, loading: loadingForecast, error: forecastError }] = useFetchStockForecast();
+  // const [searchParams] = useSearchParams();
 
-  useEffect(() => {
-    fetchStockData(); // Fetch initial stock data
-  }, []);
+  // useEffect(() => {
+  //   fetchStockData(); // Call fetchStockData without any parameters
+  // }, []);
 
   const handleSearch = (searchTerm) => {
-    setSearchTerm(searchTerm); // Update the search term state
-    fetchStockForecast(searchTerm); // Fetch forecast data as well
+    if (searchTerm) {
+      fetchStockData(searchTerm);
+      // fetchStockForecast(searchTerm); // Fetch forecast data as well
+    }
   };
 
   // Filter data based on the search term
@@ -117,16 +118,14 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="home">
-        <Header handleSearch={handleSearch} />
-        {loading && data.length === 0 && <Loading />} {/* Show Loading only if no data is loaded */}
-        {loadingForecast && <Loading />} {/* Loading for forecast */}
-        {filteredData.length > 0 && <CardList recipes={filteredData} />}
-        {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>}
-        {error && <p>{error}</p>}
-        {forecastError && <p>{forecastError}</p>}
-        <Caps/>
-      </div>
+      <Header handleSearch={handleSearch} />
+      {loading && <Loading />}
+      {/* {loadingForecast && <Loading />} Show loading for forecast */}
+      {data && <CardList recipes={data} />}
+      {/* {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>} Display forecast */}
+      {error && <p>{error}</p>}
+      {/* {forecastError && <p>{forecastError}</p>} Show forecast error */}
+      <Caps/>
     </>
   );
 }

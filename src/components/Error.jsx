@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-// import emptyPlate from "../assets/no-food-found.png";
+// import emptyPlate from "../assets/nodatafound.png";
 
 // export default function Error({ message, explanation }) {
 //   return (
@@ -13,7 +13,7 @@
 // }
 
 import { Link } from "react-router-dom";
-import emptyPlate from "../assets/no-food-found.png";
+import emptyPlate from "../assets/nodatafound.png";
 
 export default function Error({ message, explanation }) {
   return (

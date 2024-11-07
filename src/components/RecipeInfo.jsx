@@ -13,7 +13,7 @@
 import { Outlet } from "react-router-dom";
 
 export default function RecipeInfo({ instructions, image, ingredients }) {
-  console.log("fsdfsd");
+  // console.log("fsdfsd");
   return (
     <div className="recipe-info flex flex-col items-center p-4">
       I am happybvmb,jhjhl
