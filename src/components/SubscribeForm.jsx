@@ -9,7 +9,7 @@ const SubscribeForm = () => {
 
     emailjs
       .sendForm('service_67gl88d', 'template_vd8cp9a', form.current, {
-        publicKey: 'Kzcsmv8bP76qWt09s',
+        publicKey: '-XnWWF1jy8iK7L6v4',
       })
       .then(
         () => {
