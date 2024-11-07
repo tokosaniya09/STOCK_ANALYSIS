@@ -9,17 +9,17 @@ import Caps from "@/components/Caps";
 
 export default function HomePage() {
   const [fetchStockData, { data, loading, error }] = useFetchStockData();
-  const [fetchStockForecast, { forecastData, loading: loadingForecast, error: forecastError }] = useFetchStockForecast();
-  const [searchParams] = useSearchParams();
+  // const [fetchStockForecast, { forecastData, loading: loadingForecast, error: forecastError }] = useFetchStockForecast();
+  // const [searchParams] = useSearchParams();
 
-  useEffect(() => {
-    fetchStockData(); // Call fetchStockData without any parameters
-  }, []);
+  // useEffect(() => {
+  //   fetchStockData(); // Call fetchStockData without any parameters
+  // }, []);
 
   const handleSearch = (searchTerm) => {
     if (searchTerm) {
       fetchStockData(searchTerm);
-      fetchStockForecast(searchTerm); // Fetch forecast data as well
+      // fetchStockForecast(searchTerm); // Fetch forecast data as well
     }
   };
 
@@ -27,11 +27,11 @@ export default function HomePage() {
     <>
       <Header handleSearch={handleSearch} />
       {loading && <Loading />}
-      {loadingForecast && <Loading />} {/* Show loading for forecast */}
+      {/* {loadingForecast && <Loading />} Show loading for forecast */}
       {data && <CardList recipes={data} />}
-      {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>} {/* Display forecast */}
+      {/* {forecastData.length > 0 && <div>Forecast: {forecastData.join(", ")}</div>} Display forecast */}
       {error && <p>{error}</p>}
-      {forecastError && <p>{forecastError}</p>} {/* Show forecast error */}
+      {/* {forecastError && <p>{forecastError}</p>} Show forecast error */}
       <Caps/>
     </>
   );

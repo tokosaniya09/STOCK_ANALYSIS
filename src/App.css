@@ -15,7 +15,7 @@
   font-style: normal;
   color: white;
   /* mix-blend-mode: difference; */
-  user-select: none;
+  /* user-select: none; */
 }
 
 .custom-loader {
