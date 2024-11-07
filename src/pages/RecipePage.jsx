@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import useFetchRecipe from "../hooks/useFetchRecipe";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
-import { Line } from "react-chartjs-2"; // Import the Line chart from react-chartjs-2
-import Chart from 'chart.js/auto'; // Automatically registers Chart.js components
 
 export default function RecipePage() {
   const { id } = useParams();

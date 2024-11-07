@@ -16,7 +16,7 @@ export default function NavBar() {
         <i
           className="fa-solid fa-bars hamburger-icon"
           onClick={toggleNav}
-          style={{ display: isNavOpen ? "none" : "block" }}
+          // style={{ display: isNavOpen ? "none" : "block" }}
         ></i>
       </div>
 

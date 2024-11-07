@@ -1,7 +1,7 @@
 // import axios from "axios";
 // import { useState, useEffect } from "react";
 
-// const stockSymbols = ["AAPL", "GOOGL", "MSFT", "AMZN", "TSLA", "META", "NVDA", "NFLX", "INTC", "AMD", "BABA", "SPY", "V", "DIS"];
+// // const stockSymbols = ["AAPL", "GOOGL", "MSFT", "AMZN", "TSLA", "META", "NVDA", "NFLX", "INTC", "AMD", "BABA", "SPY", "V", "DIS"];
 //  // Add more stock symbols if needed
 
 // const useFetchStockData = () => {
@@ -19,8 +19,8 @@
 //           url: "https://yahoo-finance166.p.rapidapi.com/api/stock/get-price",
 //           params: { region: "US", symbol },
 //           headers: {
-//     'x-rapidapi-key': 'e12943183bmsh14f1fe9fa70b30fp15f8d7jsn4a4fe9adc8ce',
-//     'x-rapidapi-host': 'yahoo-finance166.p.rapidapi.com'
+//             'x-rapidapi-key': '23ab8f6604msh7564f848cdb6266p15162djsna5c89e14cd04',
+//             'x-rapidapi-host': 'yahoo-finance166.p.rapidapi.com'
 //           },
 //         });
 
@@ -175,7 +175,7 @@ const stockData = [
 const useFetchStockData = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   // Function to simulate fetching stock data
   const fetchStockData = async () => {
@@ -196,7 +196,7 @@ const useFetchStockData = () => {
     fetchStockData(); // Fetch data immediately on load
   }, []);
 
-  return [fetchStockData, { data, loading, error }];
+  return [fetchStockData, { data, loading }];
 };
 
 export default useFetchStockData;
