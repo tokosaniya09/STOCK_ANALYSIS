@@ -23,6 +23,10 @@ Codeteria is powered by modern technologies to ensure a seamless experience:
 - **API**: Yahoo Finance
 - **Deployment**: Netlify
 
+## 🔗 Link 
+ 
+ - **Website Link**: https://stocktrekker.netlify.app
+
 
 ## 👥 Our Valuable Contributors ❤️✨
 All the amazing people who have contributed to Stock Trekker! 💖
